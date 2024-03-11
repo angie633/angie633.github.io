@@ -4,163 +4,133 @@
     <meta charset="UTF-8">
     <title>REU</title>
 
-<style>
-    .description{
-        background-color: ghostwhite;
-        color: black;
-        border: 2px solid black;
-        margin: 20px;
-        padding: 20px;
-    }
+    <style>
+        .description{
+            background-color: ghostwhite;
+            color: black;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
 
-#layout{
-    padding-left: 20px;
+        #layout{
+            padding-left: 20px;
 
-}
+        }
 
-.NIR{
-        background-color: ghostwhite;
-        color: black;
-        border: 2px solid gray;
-        margin: 20px;
-        padding: 20px;
-        width: 30%;
-}
-
-
-.nir_pic{
-    float: left;
-
-}
-
-.orbeez{
-        background-color: ghostwhite;
-        color: black;
-        border: 2px solid gray;
-        margin: 20px;
-        padding: 20px;
-        width: 30%;
-}
-
-.printing{
-        background-color: ghostwhite;
-        color: black;
-        border: 2px solid gray;
-        margin: 20px;
-        padding: 20px;
-        width: 30%;
-}
-
-.circuit{
-        background-color: ghostwhite;
-        color: black;
-        border: 2px solid gray;
-        margin: 20px;
-        padding: 20px;
-        width: 30%;
-}
-
-.modeling{
-background-color: ghostwhite;
-        color: black;
-        border: 2px solid gray;
-        margin: 20px;
-        padding: 20px;
-        width: 30%;
-}
-
-img{
-    padding-right: 0.5%;
-}
-
-video{
-    position:relative;
-    width: 250px; 
-    height: 290px;
-}
+        .textFormat{
+                background-color: ghostwhite;
+                color: black;
+                border: 2px solid gray;
+                margin: 20px;
+                padding: 20px;
+                width: 30%;
+        }
 
 
-
-</style>
+        video{
+            position:relative;
+            width: 250px; 
+            height: 290px;
+        }
+    </style>
 
 </head>
 
 <body style="background-color:blanchedalmond;">
-<h1>Columbia University REU Experience</h1>
-<p class="description">I participated in the ChemE-NYC Climate Change and Health Solutions Cohort during the summer of 2023. I was able to work under
-the guidance of Dr. Aaron Moment in Moment and Kymissis Labs. Full presentation can be found here.</p>
-<h2 style="padding-left: 20px;">Research Area: Ultrasonic Transducer Technology to Increase Drying Rate Efficiency</h2>
 
-<hr>
+    <h1>Columbia University REU Experience</h1>
 
-<img src="NIR setup.jpg" width="390" height="360" align="right">
-<div id="layout">
-<section class="NIR">
-    <h3>NIR Spectroscopy Experiments</h3>
-    <p>I conducted NIR spectroscopy experiments on both an absorbent polymer sphere and a small porous sponge. The setup included a light-sensitive chamber with a light
-    probe attached at the top. A 3D apparatus was needed to hold the polymer while it was drying.</p>
-    <h3>Purpose of Experiment</h3>
-    <p>The goal was to monitor the change in wavelength of the material as it was air drying to determine if the rate
-    would increase or decrease based on the amount of water in the sample. </p>
-</section>
+    <p class="description">I participated in the ChemE-NYC Climate Change and Health Solutions Cohort during the summer of 2023. I was able to work under
+    the guidance of Dr. Aaron Moment in Moment and Kymissis Labs. Full presentation can be found here.</p>
+    <h2 style="padding-left: 20px;">Research Area: Ultrasonic Transducer Technology to Increase Drying Rate Efficiency</h2>
 
-<hr>
+    <hr>
 
-<img src="orbeez setup.jpg" width="390" height="315" align="right">
-<section class="orbeez">
-    <h3>Transducer Drying Setup</h3>
-    <p>This setup included a chamber where the polymer sphere was dried while resting on top of an
-    ultrasonic transducer. The transducer emitted vibrational sound waves over the same length of time
-    as the NIR setup.</p>
-    <h3>Purpose of Experiment</h3>
-    <p>The goal here was to determine if the drying rate of the polymer would increase when ultrasonic
-    sound waves were present over a specific length of time.</p>
-</section>
+    <div id="layout" >
 
-<hr margin-bottom="30em">
-
-    <div style="flex: 1;">
-        <section class="circuit">
-            <h3>Driver Circuit & Levitation</h3>
-            <p>This setup was the driver circuit that allowed for the power output to the transducers. By
-            varying the frequency of the sound waves, the object between the transducers (paper) was able to
-            levitate between the nodes and anti-nodal positions.</p>
-            <h3>Purpose of Experiment</h3>
-            <p>The goal was to determine the optimal frequency of vibration for the sound waves to dry the objects.</p>
+        <section style="display: flex; align-items: flex-start;">
+            <div class="textFormat">
+                <h3>NIR Spectroscopy Experiments</h3>
+                <p>I conducted NIR spectroscopy experiments on both an absorbent polymer sphere and a small porous sponge. The setup included a light-sensitive chamber with a light
+                probe attached at the top. A 3D apparatus was needed to hold the polymer while it was drying.</p>
+                <h3>Purpose of Experiment</h3>
+                <p>The goal was to monitor the change in wavelength of the material as it was air drying to determine if the rate
+                would increase or decrease based on the amount of water in the sample. </p>
+            </div>
+        
+            <div style="margin-left: auto;">
+                <img src="NIR setup.jpg" width="390" height="360">
+            </div>
         </section>
+        
+        <hr  margin-bottom="30em">
+
+        <section style="display: flex; align-items: flex-start;">
+                <div class="textFormat">
+                    <h3>Transducer Drying Setup</h3>
+                    <p>This setup included a chamber where the polymer sphere was dried while resting on top of an
+                    ultrasonic transducer. The transducer emitted vibrational sound waves over the same length of time
+                    as the NIR setup.</p>
+                    <h3>Purpose of Experiment</h3>
+                    <p>The goal here was to determine if the drying rate of the polymer would increase when ultrasonic
+                    sound waves were present over a specific length of time.</p>
+                </div>
+                <div style="margin-left: auto;">
+                    <img src="orbeez setup.jpg" width="390" height="315">
+                </div>
+        </section>
+
+        <hr margin-bottom="30em">
+
+        <section style="display: flex; align-items: flex-start;">
+            <div class="textFormat">
+                        <h3>Driver Circuit & Levitation</h3>
+                        <p>This setup was the driver circuit that allowed for the power output to the transducers. By
+                        varying the frequency of the sound waves, the object between the transducers (paper) was able to
+                        levitate between the nodes and anti-nodal positions.</p>
+                        <h3>Purpose of Experiment</h3>
+                        <p>The goal was to determine the optimal frequency of vibration for the sound waves to dry the objects.</p>
+                </div>
+                <div style="margin-left: auto;">
+                    <video  autoplay muted controls >
+                        <source src="levitation video.mp4" type="video/mp4">
+                    </video>
+                    <img src="driver pt 2.jpg" alt="pic" width="400" height="300" style="text-align: right;">    
+                </div>
+        </section>   
+            
+        <hr  margin-bottom="30em">
+
+        <section style="display: flex; align-items: flex-start;">
+            <div class="textFormat">
+                <h3>3D Printing Projects</h3>
+                <p>This is a collection of the 3D printed models that had to be made for various parts of the
+                experiments. Each one was designed using AutoCAD and had to be modified based on the
+                requirements of the experiment.</p>
+            </div>
+            <div style="margin-left: auto;">
+                <img src="nir box.jpg" alt="pic" width="300" height="300">
+                <img src="orbeez printed.jpg" alt="pic" width="350" height="300">
+            </div>
+        </section>  
+
+        <hr  margin-bottom="30em">
+
+        <section style="display: flex; align-items: flex-start;">
+            <div class="textFormat">
+                <h3>COMSOL Simulations</h3>
+                <p>This is a collection of the COMSOL simulations that were made to model the drying process. Each
+                one examines a different aspect of drying using ultrasonic waves versus without ultrasonic waves (in
+                ambient conditions).</p>
+            </div>
+            <div style="margin-left: auto;">
+                <img src="comsol 1.jpg" alt="pic" width="330" height="400">
+                <img src="comsol 2.jpg" alt="pic" width="330" height="400">
+            </div>
+        </section>
+
     </div>
-    <div>
-        <video  autoplay muted controls >
-            <source src="levitation video.mp4" type="video/mp4">
-        </video>
-        <img src="driver pt 2.jpg" alt="pic" width="400" height="300" style="text-align: right;">    
-    </div>
-    
-<hr>
-
-<img src="nir box.jpg" alt="pic" width="390" height="400" align="right">
-<img src="orbeez printed.jpg" alt="pic" width="350" height="400" align="right">
-
-<section class="printing">
-    <h3>3D Printing Projects</h3>
-    <p>This is a collection of the 3D printed models that had to be made for various parts of the
-        experiments. Each one was designed using AutoCAD and had to be modified based on the
-        requirements of the experiment.</p>
-</section>
-
-<hr style="margin-top:14em">
-
-    <img src="comsol 1.jpg" alt="pic" width="380" height="400" align="right">
-    <img src="comsol 2.jpg" alt="pic" width="380" height="400" align="right">
-
-<section class="modeling">
-    <h3>COMSOL Simulations</h3>
-    <p>This is a collection of the COMSOL simulations that were made to model the drying process. Each
-    one examines a different aspect of drying using ultrasonic waves versus without ultrasonic waves (in
-    ambient conditions).</p>
-
-</section>
-</div>
 
 </body>
 </html>
