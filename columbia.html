@@ -14,7 +14,7 @@
     }
 
 #layout{
-    padding-left: 30px;
+    padding-left: 20px;
 
 }
 
@@ -74,11 +74,12 @@ img{
 }
 
 video{
-    transform: translate(-50%, 225%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position:relative;
+    width: 250px; 
+    height: 290px;
 }
+
+
 
 </style>
 
@@ -104,6 +105,7 @@ the guidance of Dr. Aaron Moment in Moment and Kymissis Labs. Full presentation 
 </section>
 
 <hr>
+
 <img src="orbeez setup.jpg" width="390" height="315" align="right">
 <section class="orbeez">
     <h3>Transducer Drying Setup</h3>
@@ -116,21 +118,24 @@ the guidance of Dr. Aaron Moment in Moment and Kymissis Labs. Full presentation 
 </section>
 
 <hr margin-bottom="30em">
-    <video width="270" height="290" autoplay muted controls seeking>
-        <source src="levitation video.mp4" type="video/mp4">
-    </video>
-    <img src="driver pt 2.jpg" alt="pic" width="450" height="300" align="right">
 
-<section class="circuit">
-    <h3>Driver Circuit & Levitation</h3>
-    <p>This setup was the driver circuit that allowed for the power output to the transducers. By
-    varying the frequency of the sound waves, the object between the transducers (paper) was able to
-    levitate between the nodes and anti-nodal positions.</p>
-    <h3>Purpose of Experiment</h3>
-    <p>The goal was to determine the optimal frequency of vibration for the sound waves to dry the objects.</p>
-</section>
-
-
+    <div style="flex: 1;">
+        <section class="circuit">
+            <h3>Driver Circuit & Levitation</h3>
+            <p>This setup was the driver circuit that allowed for the power output to the transducers. By
+            varying the frequency of the sound waves, the object between the transducers (paper) was able to
+            levitate between the nodes and anti-nodal positions.</p>
+            <h3>Purpose of Experiment</h3>
+            <p>The goal was to determine the optimal frequency of vibration for the sound waves to dry the objects.</p>
+        </section>
+    </div>
+    <div>
+        <video  autoplay muted controls >
+            <source src="levitation video.mp4" type="video/mp4">
+        </video>
+        <img src="driver pt 2.jpg" alt="pic" width="400" height="300" style="text-align: right;">    
+    </div>
+    
 <hr>
 
 <img src="nir box.jpg" alt="pic" width="390" height="400" align="right">
@@ -155,6 +160,7 @@ the guidance of Dr. Aaron Moment in Moment and Kymissis Labs. Full presentation 
     ambient conditions).</p>
 
 </section>
+</div>
 
 </body>
 </html>
