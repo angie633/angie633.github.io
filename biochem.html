@@ -10,39 +10,143 @@
     #description{
         background-color: ghostwhite;
         color: black;
-        border: 2px solid black;
+        border: 6px double black;
         width: 47%;
         margin: 20px;
         padding-left: 20px;
+    }
+    .native{
+        float:right;
+        background-color: ghostwhite;
+        color: black;
+        border: 6px double black;
+        width: 37%;
+        margin-top: 1.5%;
+        height:205px;
+        margin-left:2%;
+        margin-right:5%;
+        padding-left: 20px;
+    }
+    .recombine{
+        float:left;
+        background-color: ghostwhite;
+        color: black;
+        border: 6px double black;
+        width: 37%;
+        margin-top: 1.5%;
+        margin-left: 5%;
+        padding-left: 20px;
+    }
+    .similar{
+        float:inline-start;
+        background-color: ghostwhite;
+        color: black;
+        border: 6px double black;
+        width: 37%;
+        margin-left: 30%;
+        margin-top:1%;
+        padding-left: 20px;
+        margin-bottom:5%;
+    }
+    .host{
+        float:right;
+        background-color: ghostwhite;
+        color: black;
+        border: 6px double black;
+        width:45%;
+        position:relative;
+        padding-left: 2%;
+        padding-right:1.5%;
+        margin-left:10%;
+        margin-top:-20%;
+    }
+    .vector{
+        float:right;
+        background-color: ghostwhite;
+        color: black;
+        border: 6px double black;
+        width:45%;
+        position:relative;
+        padding-left: 2%;
+        padding-right:1.5%;
+        margin-left:10%;
+        margin-top:-6%;
+    }
+    .marker{
+        float:right;
+        background-color: ghostwhite;
+        color: black;
+        border: 6px double black;
+        width:45%;
+        position:relative;
+        padding-left: 2%;
+        padding-right:1.5%;
+        margin-left:10%;
+        margin-top:1.5%;
     }
 
 </style>
 
 <body style="background-color:rgb(187, 249, 189);">
 
+<section style="display: flex; align-items: flex-start;">
+    <div >
+        <h1 style="font-size:200%;"> Biochemistry Methods: Recombinant DNA & DNA Purification </h1>
+    </div>
+</section> 
+
+
 <section>
-    <h1 style="font-size:200%;"> Biochemistry Methods: Recombinant DNA & DNA Purification </h1>
     <h2>Protein Background</h2>
-    <div id="description">
+    <div class="native">
         <h3>Native Proteins</h3>
-        <ul>
+        <ul style="padding-right:12%;">
             <li>Facilitate many biological processes (gene expression, cell growth & nutrient uptake)</li>
             <li>Can undergo post-translational modifications</li>
             <li>Expression: DNA→RNA→Amino Acid codon→ protein</li>
         </ul>
     </div>
-    <div id="description">
+    <div class="recombine">
         <h3>Recombinant Proteins</h3>
-        <ul style="padding-left:5%;">
+        <ul style="padding-right:12%;">
             <li>Recombinant/modified  amino acid sequences to express a specific protein</li>
             <li>Requires host/medium for protein growth ( bacteria, yeast, mammalian cells)</li>
             <li>Recombinant expression: vector → modified → cloned → transferred to host → protein</li>
         </ul>
     </div>
-
+    <div class="similar">
+        <h3 style="text-align: center;">Note a Similarity</h3>
+        <p>Any protein can be expressed in a cell that has the same DNA codon sequence for the amino acids</p>
+    </div>
 </section>
+<section display: flex; align-items: flex-start;>
+    <h2 style="margin-right: 50%; margin-top: 30%;">Recombinant Protein Expression</h2>
+    <div id="description" style="width:43%;">
+        <h3>Purpose of Recombinant Proteins</h3>
+        <ul>
+            <li>Manipulate native form of protein to increase protein production, modify genetic sequences</li>
+            <li>Increases intracellular protein abundance and concentration</li>
+            <li>Cleave the plasmid at a specific location and splice in a codon that codes for a specific protein</li>
+        </ul>
+    </div>
+    <div class="host">
+        <h3>Host</h3>
+        <p>Rate of growth (fast or slow) & easy manipulation of cellular functions</p>
+    </div>
+    <div class="vector">
+        <h3>Expression Vector</h3>
+        <p>Modified version of extrachromosomal DNA (plasmids) that can do autonomous replication in bacterial cells</p>
+    </div>
+    <div class="marker">
+        <h3>Selection Marker</h3>
+        <p>Protein that offers resistance any toxins present in the growth medium where protein is being expressed</p>
+    </div>
+    <div style="margin:auto;">
+        <img src="RecombinantDNA.png" alt="pic" width="400" height="300">
+    </div>
+</section>
+<hr>
 
-
-
+<h1> More to be added!</h1>
 </body>
 </html>
