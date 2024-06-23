@@ -8,28 +8,47 @@
 <style>
 
 .nav_bar{
+  flex:auto;
   margin:1%;
-  margin-right:1%;
-  padding:1%;
+  margin-right:30%;
+  padding-top:1%;
   padding-right:4%;
+  padding-bottom:0.2%;
   font-family:Monaco;
   border-radius: 15px;  
-  background-color:#E384FF;
+  background-color:#FFB1B1;
   box-shadow: 15px 15px 5px rgba(170, 202, 202, 0.631);
   width:fit-content;
 }
-
-.container{
-    margin: 2%;
+.btn-outline-light{
+        border-width: medium;
+      }
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
 }
-
 a:visited{
         color:black;
       }
+.container{
+    margin: 2%;
+}
+.carousel-inner img {
+      width: 50%;
+    }
+
 </style>
 </head>
 
-<body style="background-color:#D9ACF5;">
+<body style="background-color:#FFCBCB;">
     <!--Nav Bar-->
     <header>
         <div class="nav_bar">
@@ -79,7 +98,7 @@ a:visited{
             <div class="card text-bg-light mb-3" style="max-width: 18rem;">
                 <div class="card-header"><h5>Engineering</h5></div>
                 <div class="card-body" style="background-color: #FDEBED;">
-                  <p class="card-text">PFDs, Quality Assurance, Safety Assessments, NIR Spectroscopy, Statistical Modeling</p>
+                  <p class="card-text">PFDs, Quality Assurance, Safety Assessments, Statistical Modeling</p>
                 </div>
             </div>
           </div>
@@ -88,7 +107,7 @@ a:visited{
             <div class="card text-bg-light mb-3" style="max-width: 18rem;">
                 <div class="card-header"><h5>Programming</h5></div>
                 <div class="card-body" style="background-color: #AAE3E2;">
-                  <p class="card-text"> HTML/CSS, Python (NumPy, SymPy), Tensorflow, MATLAB, VBA Excel, Jupyter Notebook</p>
+                  <p class="card-text"> HTML/CSS, Python (NumPy, SymPy), Tensorflow, MATLAB, VBA Excel, Jupyter Notebook, Benchling, NEBuilder</p>
                 </div>
             </div>
           </div>
@@ -97,7 +116,7 @@ a:visited{
             <div class="card text-bg-light mb-3" style="max-width: 18rem;">
                 <div class="card-header"><h5>Lab Techniques</h5></div>
                 <div class="card-body" style="background-color: #FDEBED;">
-                  <p class="card-text">dPCR/PCR, Hemocytometry, DNA Extraction, Protein Purification, Column Extraction, Protein Assays</p>
+                  <p class="card-text">dPCR/PCR, Hemocytometry, DNA Extraction, Protein Purification, Column Chromatography, Protein Assays, Plasmid Transformation, Plate Reading, Primer Design</p>
                 </div>
             </div>
           </div>
@@ -105,135 +124,17 @@ a:visited{
       </div>
 </section>
 
-<!--Lab work-->
+<!--REU-->
 <section>
   <hr  margin-bottom="30em">
-<!--REU-->
-  <h1 style="margin:2%">Columbia University REU Experience</h1>
+  <h1 style="margin:2%">Columbia University: REU Experience (Moment & Kymissis Lab)</h1>
   <h2 style="margin:2%">Research Area: Ultrasonic Transducer Technology to Increase Drying Rate Efficiency</h2>
-  <button type="button" class="btn btn-outline-light" style="margin-left: 2%;"><a href=https://docs.google.com/presentation/d/1Sf9m_bUDr2yUecIgxL0sdQ9Cqx3unNCd/edit?usp=sharing&ouid=118368788342696745468&rtpof=true&sd=true>View Presentation here</a></button>
-<!--NIR-->
-<div class="container text-center">
-  <!--1st row-->
-  <div style="margin: 3%;">
-  <div class="row">
-    <div class="col">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Description of Experiment</h5>
-          <p class="card-text">I conducted NIR spectroscopy experiments on both an absorbent polymer sphere and a small porous sponge. The setup included a light-sensitive chamber with a light probe attached at the top. A 3D apparatus was needed to hold the polymer while it was drying.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <img src="NIR setup.jpg" class="card-img-top" alt="...">
-    </div>
-    <div class="col">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Purpose of Experiment</h5>
-          <p class="card-text">The goal was to monitor the change in wavelength of the material as it was air drying to determine if the rate would increase or decrease based on the amount of water in the sample.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <!--2nd row-->
-  <div style="margin: 3%;">
-  <div class="row">
-    <div class="col">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Transducer Drying Setup</h5>
-          <p class="card-text">This setup included a chamber where the polymer sphere was dried while resting on top of an ultrasonic transducer. The transducer emitted vibrational sound waves over the same length of time as the NIR setup.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-5">
-      <img src="orbeez setup.jpg" class="card-img-top" alt="...">
-    </div>
-    <div class="col">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Purpose of Experiment</h5>
-          <p class="card-text">The goal here was to determine if the drying rate of the polymer would increase when ultrasonic sound waves were present over a specific length of time.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--3rd row-->
-<div style="margin: 3%;">
-  <div class="row">
-    <div class="col">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Driver Circuit Levitation</h5>
-          <p class="card-text">This setup was the driver circuit that allowed for the power output to the transducers. By varying the frequency of the sound waves, the object between the transducers (paper) was able to levitate between the nodes and anti-nodal positions.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-5">
-      <img src="driver pt 2.jpg" class="card-img-top" alt="...">
-    </div>
-    <div class="col">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Purpose of Experiment</h5>
-          <p class="card-text">The goal was to determine the optimal frequency of vibration for the sound waves to dry the objects.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--4th row 3D print-->
-<div style="margin: 3%;">
-  <div class="row">
-    <div class="col">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">3D Printed Projects</h5>
-          <p class="card-text">This is a collection of the 3D printed models that had to be made for various parts of the experiments. Each one was designed using AutoCAD and had to be modified based on the requirements of the experiment.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-5">
-      <img src="orbeez printed.jpg" class="card-img-top" alt="...">
-    </div>
-    <div class="col">
-      <div class="card mb-3">
-          <img src="nir box.jpg" class="card-img-top" alt="...">
-      </div>
-    </div>
-  </div>
-</div>
-<!--5th row comsol-->
-<div style="margin: 3%;">
-  <div class="row">
-    <div class="col">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">COMSOL Simulations</h5>
-          <p class="card-text">This is a collection of the COMSOL simulations that were made to model the drying process. Each one examines a different aspect of drying using ultrasonic waves versus without ultrasonic waves (in ambient conditions).</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-5">
-      <img src="comsol 1.jpg" class="card-img-top" alt="...">
-    </div>
-    <div class="col">
-      <div class="card mb-3">
-          <img src="comsol 2.jpg" class="card-img-top" alt="...">
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+  <button type="button" class="btn btn-outline-light" style="margin-left: 2%; margin-bottom: 2%;"><a href=https://docs.google.com/presentation/d/1Sf9m_bUDr2yUecIgxL0sdQ9Cqx3unNCd/edit?usp=sharing&ouid=118368788342696745468&rtpof=true&sd=true>View Presentation here</a></button>
 </section>
-<!--Banta Lab-->
-<hr  margin-bottom="30em">
-<section>
 
+<!--banta lab-->
+<!--section>
+  <hr  margin-bottom="30em">
+  <h1 style="margin:2%">Columbia University: Protein Engineering (Banta Lab) </h1>
+  <h2 style="margin:2%">Research Area: A.ferrooxidan Cell Classification for Bioleaching/Biomining</h2>
 </section>
-</body>
-</html>
