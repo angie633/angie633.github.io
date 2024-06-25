@@ -17,8 +17,8 @@
   padding-bottom:0.2%;
   font-family:Monaco;
   border-radius: 15px;  
-  background-color:#99F3BD;
-  box-shadow: 15px 15px 5px rgba(170, 202, 202, 0.631);
+  background-color:#8DECB4;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   width:fit-content;
 }
 .btn-outline-light{
@@ -37,11 +37,56 @@ a:active {
   text-decoration: none; 
 }
 .card-body{
-  background-color: #F6F7D4;
+  background-color: #FCF3C5;
 }
 a:visited{
         color:black;
       }
+
+  .button-29 {
+  align-items: center;
+  background-image: radial-gradient(100% 100% at 100% 0, #D2F6C5 0, #99F3BD 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
 
     </style>
 </head>
@@ -51,20 +96,21 @@ a:visited{
 <header>
     <div class="nav_bar">
       <ul>
-      <button type="button" class="btn btn-outline-light"><a href=index.html>Home</a></button></button>
-      <button type="button" class="btn btn-outline-light"><a href=aboutme.html>Experience</a></button>
-      <button type="button" class="btn btn-outline-light"><a href=research.html>Research Papers</a></button>
-      <button type="button" class="btn btn-outline-light"><a href=biochem.html>Projects</a></button>
+      <a href=index.html><button class="button-29" role="button">Home</button></a>
+      <a href=aboutme.html><button class="button-29" role="button">Experience</button></a>
+      <a href=research.html><button class="button-29" role="button">Research Papers</button></a>
+      <a href=biochem.html><button class="button-29" role="button">Projects</button></a>
       </ul>
     </div>
 </header>
+<h1 style="margin:3%; font-family: Monaco;">Project Archive</h1>
 <section style="margin: 4%;">
     <div class="container text-center">
         <div class="row">
           <!--1st Card-->  
           <div class="col">
             <div class="card text-center">
-                <div class="card-header" style="background-color: #FEC7B4">
+                <div class="card-header" style="background-color: #F3CEBA">
                   Biochemistry
                 </div>
                 <div class="card-body">
@@ -84,7 +130,7 @@ a:visited{
           <!--2nd Card-->
           <div class="col">
             <div class="card text-center">
-                <div class="card-header" style="background-color: #FEC7B4">
+                <div class="card-header" style="background-color: #F3CEBA">
                   Modeling & Simulation (Schrodinger)
                 </div>
                 <div class="card-body">
@@ -107,7 +153,7 @@ a:visited{
             <!--3rd Card-->
           <div class="col">
             <div class="card text-center">
-                <div class="card-header" style="background-color: #FEC7B4">
+                <div class="card-header" style="background-color: #F3CEBA">
                   Aspen HYSYS
                 </div>
                 <div class="card-body">

@@ -17,7 +17,7 @@
   font-family:Monaco;
   border-radius: 15px;  
   background-color:#FFB1B1;
-  box-shadow: 15px 15px 5px rgba(170, 202, 202, 0.631);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   width:fit-content;
 }
 .btn-outline-light{
@@ -41,9 +41,77 @@ a:visited{
 .container{
     margin: 2%;
 }
-.carousel-inner img {
-      width: 50%;
-    }
+
+.button-29 {
+  align-items: center;
+  background-image: radial-gradient(100% 100% at 100% 0, #FFD0D0 0, #FFB1B1 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.button-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  color: black;
+  background: linear-gradient(180deg, #FFD0D0 0%, #FFB1B1  100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-10:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+.reu{
+  height:100%;
+  width:40%;
+}
 
 </style>
 </head>
@@ -53,10 +121,10 @@ a:visited{
     <header>
         <div class="nav_bar">
           <ul>
-          <button type="button" class="btn btn-outline-light"><a href=index.html>Home</a></button></button>
-          <button type="button" class="btn btn-outline-light"><a href=aboutme.html>Experience</a></button>
-          <button type="button" class="btn btn-outline-light"><a href=research.html>Research Papers</a></button>
-          <button type="button" class="btn btn-outline-light"><a href=biochem.html>Projects</a></button>
+          <a href=index.html><button class="button-29" role="button">Home</button></a>
+          <a href=aboutme.html><button class="button-29" role="button">Experience</button></a>
+          <a href=research.html><button class="button-29" role="button">Research Papers</button></a>
+          <a href=biochem.html><button class="button-29" role="button">Projects</button></a>
           </ul>
         </div>
     </header>
@@ -126,10 +194,18 @@ a:visited{
 
 <!--REU-->
 <section>
-  <hr  margin-bottom="30em">
-  <h1 style="margin:2%">Columbia University: REU Experience (Moment & Kymissis Lab)</h1>
-  <h2 style="margin:2%">Research Area: Ultrasonic Transducer Technology to Increase Drying Rate Efficiency</h2>
-  <button type="button" class="btn btn-outline-light" style="margin-left: 2%; margin-bottom: 2%;"><a href=https://docs.google.com/presentation/d/1Sf9m_bUDr2yUecIgxL0sdQ9Cqx3unNCd/edit?usp=sharing&ouid=118368788342696745468&rtpof=true&sd=true>View Presentation here</a></button>
+  <div class="card">
+    <div class="card-header" style="font-family: Monaco;">
+      Summer 2023
+    </div>
+    <div class="card-body" style="background-color: #FDEBED;">
+      <h5 class="card-title" style="font-family: Monaco;"><strong>Columbia University: REU Experience (Moment & Kymissis Lab)</strong></h5>
+      <p class="card-text">Research Area: Ultrasonic Transducer Technology to Increase Drying Rate Efficiency</p>
+      <a href="https://docs.google.com/presentation/d/1Sf9m_bUDr2yUecIgxL0sdQ9Cqx3unNCd/edit?usp=sharing&ouid=118368788342696745468&rtpof=true&sd=true"><button class="button-10" role="button">View Presentation here</button></a>
+    </div>
+  </div>
+
+  
 </section>
 
 <!--banta lab-->
