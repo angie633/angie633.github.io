@@ -16,7 +16,7 @@
   padding-bottom:0.2%;
   font-family:Monaco;
   border-radius: 15px;  
-  background-color:#ff8e8e;
+  background-color:#32746D;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   width:fit-content;
 }
@@ -44,7 +44,7 @@ a:visited{
 
 .button-29 {
   align-items: center;
-  background-image: radial-gradient(100% 100% at 100% 0, #FFD0D0 0, #FFB1B1 100%);
+  background-image: radial-gradient(100% 100% at 100% 0, #71CCD5 0, #F6F4F0 100%);
   border: 0;
   border-radius: 6px;
   box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
@@ -77,12 +77,12 @@ a:visited{
 }
 
 .button-29:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #FFB1B1 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #2E5077 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
 .button-29:active {
-  box-shadow: #FFB1B1 0 3px 7px inset;
+  box-shadow: #2E5077 0 3px 7px inset;
   transform: translateY(2px);
 }
 
@@ -94,16 +94,14 @@ a:visited{
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
   border-radius: 6px;
   border: none;
-
   color: black;
-  background: linear-gradient(180deg, #FFD0D0 0%, #FFB1B1  100%);
+  background: linear-gradient(180deg, #F6F4F0 0%, #71CCD5  100%);
    background-origin: border-box;
   box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
 .button-10:focus {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
@@ -111,14 +109,61 @@ a:visited{
 .reu{
   height:100%;
   width:40%;
+}
+.honeycomb-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
 
+.honeycomb-cell {
+  position: relative;
+  width: 250px;
+  height: 230px;
+  clip-path: polygon(
+    50% 0%, 
+    100% 25%, 
+    100% 75%, 
+    50% 100%, 
+    0% 75%, 
+    0% 25%
+  );
+  background-color: #32746D;
+  color: #F6F4F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
+.honeycomb-cell:hover {
+  transform: scale(1.05);
+  box-shadow: inset 0 8px 12px #F6F4F0;
+}
+
+.honeycomb-content {
+  padding: 10px;
+}
+
+.honeycomb-content h5 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-family: 'Monaco', monospace;
+}
+
+.honeycomb-content p {
+  font-size: 14px;
+  font-family: 'Monaco', monospace;
 }
 
 </style>
 </head>
 
-<body style="background-color:#FFCBCB;">
+<body style="background-color:#71CCD5;">
     <!--Nav Bar-->
     <header>
         <div class="nav_bar">
@@ -126,7 +171,7 @@ a:visited{
           <a href=index.html><button class="button-29" role="button">Home</button></a>
           <a href=aboutme.html><button class="button-29" role="button">Experience</button></a>
           <a href=research.html><button class="button-29" role="button">Research Papers</button></a>
-          <a href=biochem.html><button class="button-29" role="button">Projects</button></a>
+          <a href=projects.html><button class="button-29" role="button">Projects</button></a>
           </ul>
         </div>
     </header>
@@ -136,13 +181,14 @@ a:visited{
     <div class="card mb-3" style="max-width: 600px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="self pic 2.jpg" class="img-fluid rounded-start" alt="pic of me">
+            <img src="self pic 2.jpg" class="img-fluid rounded-start w-100 h-100" style="object-fit: cover;" alt="pic of me">
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">About Me</h5>
-              <p class="card-text">Driven by a passion for biopharmaceutical development, I'm proficient in technical writing and lab research, aiming to make pharmaceutical processes sustainable and health-focused. My goal is to enhance either bench top or large-scale processes that will provide the most efficient outcome.</p>
-              <p class="card-text"><small class="text-body-secondary">B.S. Chemical Engineering~Manhattan College </small></p>
+              <p class="card-text">Driven by a passion for biopharmaceutical development, I'm proficient in technical writing, lab research, and industry manufacturing processes. I'm aiming to make pharmaceutical processes sustainable and health-focused by enhancing either bench top or large-scale processes that will provide the most efficient outcome.</p>
+              <p class="card-text"><small class="text-body-secondary">B.S. Chemical Engineering~Manhattan University~2025 </small></p>
+              <p class="card-text"><small class="text-body-secondary">M.S. Chemical Engineering~Manhattan University~2026 </small></p>
             </div>
           </div>
         </div>
@@ -151,59 +197,141 @@ a:visited{
 
 <!--Row 1 of skills-->
 <section>
-    <div class="container text-center">
-        <div class="row row-cols-4">
-            <!--Skill 1-->
-          <div class="col">
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-                <div class="card-header"><h5>Software</h5></div>
-                <div class="card-body" style="background-color: #107063; color:#ffe5e5;">
-                  <p class="card-text">SAutoCAD, Solidworks, COMSOL Multiphysics Simulations, Aspen HYSYS
-                  </p>
-                </div>
-            </div>
-          </div>
-          <!--Skill 2-->
-          <div class="col">
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-                <div class="card-header"><h5>Engineering</h5></div>
-                <div class="card-body" style="background-color: #FDEBED; color:#107063;">
-                  <p class="card-text">PFDs, Quality Assurance, Safety Assessments, Statistical Modeling</p>
-                </div>
-            </div>
-          </div>
-          <!--Skill 3-->
-          <div class="col">
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-                <div class="card-header"><h5>Programming</h5></div>
-                <div class="card-body" style="background-color: #107063; color:#ffe5e5;">
-                  <p class="card-text"> HTML/CSS, Python (NumPy, SymPy), Tensorflow, MATLAB, VBA Excel, Jupyter Notebook, Benchling, NEBuilder</p>
-                </div>
-            </div>
-          </div>
-          <!--Skill 4-->
-          <div class="col">
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-                <div class="card-header"><h5>Lab Techniques</h5></div>
-                <div class="card-body" style="background-color: #FDEBED; color:#107063;">
-                  <p class="card-text">dPCR/PCR, Hemocytometry, DNA Extraction, Protein Purification, Column Chromatography, Protein Assays, Plasmid Transformation, Plate Reading, Primer Design</p>
-                </div>
-            </div>
+  <div class="honeycomb-container">
+    <div class="honeycomb-cell">
+      <div class="honeycomb-content">
+        <h5><strong>Software</strong></h5>
+        <p>AutoCAD, Solidworks, COMSOL, Aspen HYSYS</p>
+      </div>
+    </div>
+    <div class="honeycomb-cell">
+      <div class="honeycomb-content">
+        <h5><strong>Engineering</strong></h5>
+        <p>PFDs, Quality Assurance, Safety Assessments, Statistical Modeling</p>
+      </div>
+    </div>
+    <div class="honeycomb-cell">
+      <div class="honeycomb-content">
+        <h5><strong>Programming</strong></h5>
+        <p>HTML/CSS, Python, Tensorflow, MATLAB, VBA, Jupyter Notebook</p>
+      </div>
+    </div>
+    <div class="honeycomb-cell">
+      <div class="honeycomb-content">
+        <h5><strong>Lab Techniques</strong></h5>
+        <p>dPCR/PCR, Hemocytometry, DNA Extraction, Protein Purification</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--banta lab-->
+<section>
+  <div class="card">
+    <div class="card-header" style="font-family: Monaco; background-color: #2E5077; color: #F6F4F0;">
+      Summer 2024
+    </div>
+    <div class="card-body" style="background-color: #F6F4F0;">
+      <h5 class="card-title" style="font-family: Monaco; color: #010D1C;"><strong>Columbia University: Protein Engineering (Banta Lab)</strong></h5>
+      <p class="card-text" style="font-family: Monaco; color:#010D1C;">Research Area: A.ferrooxidan Cell Classification for Bioleaching/Biomining</p>
+      <p class="card-text" style="font-family: Monaco; color:#010D1C;">Performed experiments to classify ferrooxidans cells and their impact on bio-leaching processes for extraction of rare-earth elements from mining pollution</p>
+    </div> 
+  </div>
+  <section style="margin:1%;">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="gel vector.jpg" class="card-img-top" alt="3d blue box">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">Gel Results for Ligation of Tetracycline resistance & pSB536 vector</h5>
+            <p class="card-text">3 step PCR process to create vector with tetracycline resistance.
+            <p class="card-text"></p>PCR 1—Vector: cuts out ampicillin from pSB5361
+            <p class="card-text"></p>  PCR 2—insert: prime tetracycline strand
+            <p class="card-text"></p>  PCR 3—ligate tetracycline into parent vector to create biosensor with new resistance</p>
           </div>
         </div>
       </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="filter.jpg" class="card-img-top" alt="orbeez  in 3d print">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">Filters for sm4 Media</h5>
+            <p class="card-text">Filtration was done for various cell growth media that required multiple salts.
+              The sm4 media in particular contained a variety of salts to allow osmotic balance in solution for the cells 
+              to uptake their energy source. Media was filtered and then colloidal sulfur was added as an experimental factor to 
+              determine ferrooxidan activity in the absence of an iron source. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="Screenshot 2024-06-10 at 2.33.58 PM.png" class="card-img-top" alt="...">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">Hemocytometry: Cell Counting in 9K Media</h5>
+            <p class="card-text">After allowing ferrooxidan cells to grow in 9K basal salt media for a 
+              few weeks, cells were counted to determine ferrooxidan growth in the presence of their primary
+              food source: Fe2+. The orange/yellow spots are iron particules and cells were stained with Lugol
+              iodine stain for better visibility. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="pH probe.jpg" class="card-img-top" alt="...">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">Media Formulation and pH Testing</h5>
+            <p class="card-text"> Created different types of media for cell growth that contained various salts 
+              and energy sources. Primarily, 9K basal salt media was used to ferrooxidan cell growth as it's highly acidic
+              but contains enough iron for the cells to metabolize. Other media created include sm4 (sulphur-containing), LB
+              media (used for e.coli growth), and F2S media (iron & sulphur).  
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="pcr ligate.jpg" class="card-img-top" alt="orbeez  in 3d print">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">PCR Ligation Setup</h5>
+            <p class="card-text">The following setup was used to perform ligation of the plasmids of interest. The 
+              PCR tube comtained the insert (tetracycline) and the vector (pSB536), which were to be combined together 
+              and then inserted into e.coli cells to test for resistance. This setup had to be modified in multiple aspects 
+              including: PCR extension time, concentrations of plasmids used in initial primer step, re-design of primer 
+              sequences for tetracycline insert.  
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="miniprep.jpg" class="card-img-top" alt="...">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">DNA Mini-Prep/Extraction</h5>
+            <p class="card-text"> Frequently, I would have to prepare DNA from overnight samples or gel electrophoresis agarose samples. 
+              For overnight cell cultures (pictured), I would centrifuge the sample prior to extracting the DNA with a series of buffers. 
+              For an agarose sample, I would have to dissolve the cut gel in an acidic buffer before DNA extraction. Each sample was tested 
+              for the desired DNA concentration using a spectrophotemeter. Often, the DNA from this protocol would be used in other experiments
+              such as for PCR or transfection steps. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
 
 <!--REU-->
 <section>
   <div class="card">
-    <div class="card-header" style="font-family: Monaco; background-color: #107063; color: #ffe5e5;">
+    <div class="card-header" style="font-family: Monaco; background-color: #2E5077; color: #F6F4F0;">
       Summer 2023
     </div>
-    <div class="card-body" style="background-color: #FDEBED;">
-      <h5 class="card-title" style="font-family: Monaco; color: #107063;"><strong>Columbia University: REU Experience (Moment & Kymissis Lab)</strong></h5>
-      <p class="card-text" style="font-family: Monaco; color:#107063;">Research Area: Ultrasonic Transducer Technology to Increase Drying Rate Efficiency</p>
-      <p class="card-text" style="font-family: Monaco; color:#107063;">Designed and facilitated experiments for ultrasonic transducer sound waves to increase drying efficiency while reducing energy consumption</p>
+    <div class="card-body" style="background-color: #F6F4F0;">
+      <h5 class="card-title" style="font-family: Monaco; color: #010D1C;"><strong>Columbia University: REU Experience (Moment & Kymissis Lab)</strong></h5>
+      <p class="card-text" style="font-family: Monaco; color:#010D1C;">Research Area: Ultrasonic Transducer Technology to Increase Drying Rate Efficiency</p>
+      <p class="card-text" style="font-family: Monaco; color:#010D1C;">Designed and facilitated experiments for ultrasonic transducer sound waves to increase drying efficiency while reducing energy consumption</p>
       <a href="https://docs.google.com/presentation/d/1Sf9m_bUDr2yUecIgxL0sdQ9Cqx3unNCd/edit?usp=sharing&ouid=118368788342696745468&rtpof=true&sd=true"><button class="button-10" role="button">View Presentation here</button></a>
     </div> 
   </div>
@@ -212,7 +340,7 @@ a:visited{
     <div class="col">
       <div class="card h-100">
         <img src="nir box.jpg" class="card-img-top" alt="3d blue box">
-        <div class="card-body" style="background-color: #ffe5e5;">
+        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
           <h5 class="card-title">NIR 3D Printed Box</h5>
           <p class="card-text">A 3D printed box that would hold the NIR sample and probe. Created using AutoCAD and Prusa slicing software.</p>
         </div>
@@ -221,7 +349,7 @@ a:visited{
     <div class="col">
       <div class="card h-100">
         <img src="orbeez printed.jpg" class="card-img-top" alt="orbeez  in 3d print">
-        <div class="card-body" style="background-color: #ffe5e5;">
+        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
           <h5 class="card-title">3D Printed Orbeez Holder</h5>
           <p class="card-text">The blue rectangle plate was 3D printed to hold the sample inside the NIR setup. Design specs were determined using AutoCAD.</p>
         </div>
@@ -230,7 +358,7 @@ a:visited{
     <div class="col">
       <div class="card h-100">
         <img src="orbeez setup.jpg" class="card-img-top" alt="...">
-        <div class="card-body" style="background-color: #ffe5e5;">
+        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
           <h5 class="card-title">Orbeez Drying Apparatus</h5>
           <p class="card-text">The drying apparatus consisted of a scale, a small 3D printed box to hold the orbeez sample, and a driver circuit
             connected under the box. The goal was to monitor the weight of the sample as it dried while being supplied a specific frequency. At the optimal
@@ -241,7 +369,7 @@ a:visited{
     <div class="col">
       <div class="card h-100">
         <img src="NIR setup.jpg" class="card-img-top" alt="...">
-        <div class="card-body" style="background-color: #ffe5e5;">
+        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
           <h5 class="card-title">NIR Spectroscopy Setup</h5>
           <p class="card-text">The NIR Spectroscopy setup included a light probe and a chamber to hosue the sample. The probe detects light wavelengths of specific colors
             depending on the sample type. For the polymer "Orbeez" I studied, the wavelengths would decrease over time as the amount of light reflecting off the 
@@ -253,7 +381,7 @@ a:visited{
     <div class="col">
       <div class="card h-100">
         <img src="driver pt 2.jpg" class="card-img-top" alt="orbeez  in 3d print">
-        <div class="card-body" style="background-color: #ffe5e5;">
+        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
           <h5 class="card-title">Driver Circuit</h5>
           <p class="card-text">This circuit was designed with a "driver" sink. This setup was used to 
             determine the optimal frequency and voltage for a faster drying rate. It was also used to determine
@@ -265,7 +393,7 @@ a:visited{
     <div class="col">
       <div class="card h-100">
         <img src="comsol 1.jpg" class="card-img-top" alt="...">
-        <div class="card-body" style="background-color: #ffe5e5;">
+        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
           <h5 class="card-title">COMSOL Multiphysics Modeling</h5>
           <p class="card-text">This was a model rendering to test the thermodynamics and heat 
             transfer properties of drying rates with an ultrasonic transducer. The blue areas represent 
@@ -280,99 +408,3 @@ a:visited{
   
 </section>
 
-<!--banta lab-->
-<section>
-  <div class="card">
-    <div class="card-header" style="font-family: Monaco; background-color: #107063; color: #ffe5e5;">
-      Summer 2024
-    </div>
-    <div class="card-body" style="background-color: #FDEBED;">
-      <h5 class="card-title" style="font-family: Monaco; color: #107063;"><strong>Columbia University: Protein Engineering (Banta Lab)</strong></h5>
-      <p class="card-text" style="font-family: Monaco; color:#107063;">Research Area: A.ferrooxidan Cell Classification for Bioleaching/Biomining</p>
-      <p class="card-text" style="font-family: Monaco; color:#107063;">Performed experiments to classify ferrooxidans cells and their impact on bio-leaching processes for extraction of rare-earth elements from mining pollution</p>
-    </div> 
-  </div>
-  <section style="margin:1%;">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="gel vector.jpg" class="card-img-top" alt="3d blue box">
-          <div class="card-body" style="background-color: #ffe5e5;">
-            <h5 class="card-title">Gel Results for Ligation of Tetracycline resistance & pSB536 vector</h5>
-            <p class="card-text">3 step PCR process to create vector with tetracycline resistance.
-            <p class="card-text"></p>PCR 1—Vector: cuts out ampicillin from pSB5361
-            <p class="card-text"></p>  PCR 2—insert: prime tetracycline strand
-            <p class="card-text"></p>  PCR 3—ligate tetracycline into parent vector to create biosensor with new resistance</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="filter.jpg" class="card-img-top" alt="orbeez  in 3d print">
-          <div class="card-body" style="background-color: #ffe5e5;">
-            <h5 class="card-title">Filters for sm4 Media</h5>
-            <p class="card-text">Filtration was done for various cell growth media that required multiple salts.
-              The sm4 media in particular contained a variety of salts to allow osmotic balance in solution for the cells 
-              to uptake their energy source. Media was filtered and then colloidal sulfur was added as an experimental factor to 
-              determine ferrooxidan activity in the absence of an iron source. 
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="Screenshot 2024-06-10 at 2.33.58 PM.png" class="card-img-top" alt="...">
-          <div class="card-body" style="background-color: #ffe5e5;">
-            <h5 class="card-title">Hemocytometry: Cell Counting in 9K Media</h5>
-            <p class="card-text">After allowing ferrooxidan cells to grow in 9K basal salt media for a 
-              few weeks, cells were counted to determine ferrooxidan growth in the presence of their primary
-              food source: Fe2+. The orange/yellow spots are iron particules and cells were stained with Lugol
-              iodine stain for better visibility. 
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="pH probe.jpg" class="card-img-top" alt="...">
-          <div class="card-body" style="background-color: #ffe5e5;">
-            <h5 class="card-title">Media Formulation and pH Testing</h5>
-            <p class="card-text"> Created different types of media for cell growth that contained various salts 
-              and energy sources. Primarily, 9K basal salt media was used to ferrooxidan cell growth as it's highly acidic
-              but contains enough iron for the cells to metabolize. Other media created include sm4 (sulphur-containing), LB
-              media (used for e.coli growth), and F2S media (iron & sulphur).  
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="pcr ligate.jpg" class="card-img-top" alt="orbeez  in 3d print">
-          <div class="card-body" style="background-color: #ffe5e5;">
-            <h5 class="card-title">PCR Ligation Setup</h5>
-            <p class="card-text">The following setup was used to perform ligation of the plasmids of interest. The 
-              PCR tube comtained the insert (tetracycline) and the vector (pSB536), which were to be combined together 
-              and then inserted into e.coli cells to test for resistance. This setup had to be modified in multiple aspects 
-              including: PCR extension time, concentrations of plasmids used in initial primer step, re-design of primer 
-              sequences for tetracycline insert.  
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="miniprep.jpg" class="card-img-top" alt="...">
-          <div class="card-body" style="background-color: #ffe5e5;">
-            <h5 class="card-title">DNA Mini-Prep/Extraction</h5>
-            <p class="card-text"> Frequently, I would have to prepare DNA from overnight samples or gel electrophoresis agarose samples. 
-              For overnight cell cultures (pictured), I would centrifuge the sample prior to extracting the DNA with a series of buffers. 
-              For an agarose sample, I would have to dissolve the cut gel in an acidic buffer before DNA extraction. Each sample was tested 
-              for the desired DNA concentration using a spectrophotemeter. Often, the DNA from this protocol would be used in other experiments
-              such as for PCR or transfection steps. 
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</section>
