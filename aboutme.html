@@ -110,12 +110,14 @@ a:visited{
   height:100%;
   width:40%;
 }
+
 .honeycomb-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   padding: 20px;
+  position: relative; /* Ensure backdrop-filter works within its context */
 }
 
 .honeycomb-cell {
@@ -130,7 +132,9 @@ a:visited{
     0% 75%, 
     0% 25%
   );
-  background-color: #32746D;
+  background: #32746d90; /* Light background with transparency */
+  backdrop-filter: blur(10px); /* Apply blur for glass effect */
+  border-radius: 10px;
   color: #F6F4F0;
   display: flex;
   align-items: center;
@@ -160,9 +164,44 @@ a:visited{
   font-family: 'Monaco', monospace;
 }
 
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.rainbow-border::after,.rainbow-border::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  border-radius: 10px;
+  animation: spin 3s linear infinite;
+}
+
+.rainbow-border::before {
+  padding: 3px;
+  filter: blur(1.5rem);
+  opacity: 0.9;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
 </style>
 </head>
-
 <body style="background-color:#71CCD5;">
     <!--Nav Bar-->
     <header>
@@ -178,21 +217,21 @@ a:visited{
 
     <!--Intro pic and text-->
 <section class="container">
-    <div class="card mb-3" style="max-width: 600px;">
-        <div class="row g-0">
-          <div class="col-md-4">
+  <div class="card mb-3 rainbow-border" style="max-width: 600px;">
+    <div class="row g-0">
+        <div class="col-md-4">
             <img src="self pic 2.jpg" class="img-fluid rounded-start w-100 h-100" style="object-fit: cover;" alt="pic of me">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">About Me</h5>
-              <p class="card-text">Driven by a passion for biopharmaceutical development, I'm proficient in technical writing, lab research, and industry manufacturing processes. I'm aiming to make pharmaceutical processes sustainable and health-focused by enhancing either bench top or large-scale processes that will provide the most efficient outcome.</p>
-              <p class="card-text"><small class="text-body-secondary">B.S. Chemical Engineering~Manhattan University~2025 </small></p>
-              <p class="card-text"><small class="text-body-secondary">M.S. Chemical Engineering~Manhattan University~2026 </small></p>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">About Me</h5>
+                <p class="card-text">Driven by a passion for biopharmaceutical development, I'm proficient in technical writing, lab research, and industry manufacturing processes. I'm aiming to make pharmaceutical processes sustainable and health-focused by enhancing either bench top or large-scale processes that will provide the most efficient outcome.</p>
+                <p class="card-text"><small class="text-body-secondary">B.S. Chemical Engineering~Manhattan University~2025</small></p>
+                <p class="card-text"><small class="text-body-secondary">M.S. Chemical Engineering~Manhattan University~2026</small></p>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
 
 <!--Row 1 of skills-->
