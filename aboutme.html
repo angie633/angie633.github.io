@@ -200,6 +200,37 @@ a:visited{
   }
 }
 
+.carousel slide {
+  display: flex;
+  width: 400px;
+  overflow-x: scroll;
+  padding:90px;
+}
+
+.carousel-item .card{
+  height:100%;
+  width:100%;
+  margin: 0 auto;
+}
+
+.card-img-top {
+    width: 100%; 
+    height: 15rem; 
+    object-fit: cover; 
+    border-radius: 5px; 
+  }
+
+.card.h-100 {
+  flex-shrink: 0;
+  border-radius: 14px;
+  text-align: center;
+  background-color: #52A0A1;
+  color: #010D1C;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+
 </style>
 </head>
 <body style="background-color:#71CCD5;">
@@ -265,101 +296,133 @@ a:visited{
 </section>
 
 <!--banta lab-->
-<section>
-  <div class="card">
-    <div class="card-header" style="font-family: Monaco; background-color: #2E5077; color: #F6F4F0;">
+  <section>
+  <div class="card mb-4">
+    <div class="card-header text-white" style="background-color: #2E5077; font-family: Monaco;">
       Summer 2024
     </div>
     <div class="card-body" style="background-color: #F6F4F0;">
-      <h5 class="card-title" style="font-family: Monaco; color: #010D1C;"><strong>Columbia University: Protein Engineering (Banta Lab)</strong></h5>
-      <p class="card-text" style="font-family: Monaco; color:#010D1C;">Research Area: A.ferrooxidan Cell Classification for Bioleaching/Biomining</p>
-      <p class="card-text" style="font-family: Monaco; color:#010D1C;">Performed experiments to classify ferrooxidans cells and their impact on bio-leaching processes for extraction of rare-earth elements from mining pollution</p>
-    </div> 
+      <h5 class="card-title" style="font-family: Monaco; color: #010D1C;">
+        <strong>Columbia University: Protein Engineering (Banta Lab)</strong>
+      </h5>
+      <p class="card-text" style="font-family: Monaco; color:#010D1C;">
+        Research Area: A.ferrooxidan Cell Classification for Bioleaching/Biomining
+      </p>
+      <p class="card-text" style="font-family: Monaco; color:#010D1C;">
+        Performed experiments to classify ferrooxidans cells and their impact on bio-leaching processes for extraction of rare-earth elements from mining pollution
+      </p>
+    </div>
   </div>
-  <section style="margin:1%;">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="gel vector.jpg" class="card-img-top" alt="3d blue box">
-          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
-            <h5 class="card-title">Gel Results for Ligation of Tetracycline resistance & pSB536 vector</h5>
-            <p class="card-text">3 step PCR process to create vector with tetracycline resistance.
-            <p class="card-text"></p>PCR 1—Vector: cuts out ampicillin from pSB5361
-            <p class="card-text"></p>  PCR 2—insert: prime tetracycline strand
-            <p class="card-text"></p>  PCR 3—ligate tetracycline into parent vector to create biosensor with new resistance</p>
+
+  <!-- Carousel Wrapper -->
+  <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators/Dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="4"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="5"></button>
+    </div>
+
+    <!-- Carousel Start -->
+    <div class="carousel-inner">
+      <!-- Card 1 -->
+      <div class="carousel-item active">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="gel vector.jpg" class="card-img-top" alt="Gel vector image">
+          <div class="card-body" style="background-color: #52A0A1; color: #010D1C;">
+            <h5 class="card-title">Gel Results for Ligation</h5>
+            <p class="card-text">
+              3-step PCR process to create a vector with tetracycline resistance.<br>
+              PCR 1: Cuts out ampicillin from pSB536.<br>
+              PCR 2: Primes tetracycline strand.<br>
+              PCR 3: Ligates tetracycline into the parent vector.
+            </p>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="filter.jpg" class="card-img-top" alt="orbeez  in 3d print">
-          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+
+      <!-- Card 2 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="filter.jpg" class="card-img-top" alt="Filter image">
+          <div class="card-body" style="background-color: #52A0A1; color: #010D1C;">
             <h5 class="card-title">Filters for sm4 Media</h5>
-            <p class="card-text">Filtration was done for various cell growth media that required multiple salts.
-              The sm4 media in particular contained a variety of salts to allow osmotic balance in solution for the cells 
-              to uptake their energy source. Media was filtered and then colloidal sulfur was added as an experimental factor to 
-              determine ferrooxidan activity in the absence of an iron source. 
+            <p class="card-text">
+              Filtration was conducted for various cell growth media to balance osmotic conditions and study ferrooxidan activity.
             </p>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="Screenshot 2024-06-10 at 2.33.58 PM.png" class="card-img-top" alt="...">
-          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+
+      <!-- Card 3 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="Screenshot 2024-06-10 at 2.33.58 PM.png" class="card-img-top" alt="Hemocytometry">
+          <div class="card-body" style="background-color: #52A0A1; color: #010D1C;">
             <h5 class="card-title">Hemocytometry: Cell Counting in 9K Media</h5>
-            <p class="card-text">After allowing ferrooxidan cells to grow in 9K basal salt media for a 
-              few weeks, cells were counted to determine ferrooxidan growth in the presence of their primary
-              food source: Fe2+. The orange/yellow spots are iron particules and cells were stained with Lugol
-              iodine stain for better visibility. 
+            <p class="card-text">
+              Cells were counted to measure ferrooxidan growth in 9K basal salt media, using Lugol iodine stain for visibility.
             </p>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="pH probe.jpg" class="card-img-top" alt="...">
-          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+
+      <!-- Card 4 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="pH probe.jpg" class="card-img-top" alt="pH Probe">
+          <div class="card-body" style="background-color: #52A0A1; color: #010D1C;">
             <h5 class="card-title">Media Formulation and pH Testing</h5>
-            <p class="card-text"> Created different types of media for cell growth that contained various salts 
-              and energy sources. Primarily, 9K basal salt media was used to ferrooxidan cell growth as it's highly acidic
-              but contains enough iron for the cells to metabolize. Other media created include sm4 (sulphur-containing), LB
-              media (used for e.coli growth), and F2S media (iron & sulphur).  
+            <p class="card-text">
+              Created media for ferrooxidan growth, including 9K basal salt media and sulfur-containing sm4 media.
             </p>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="pcr ligate.jpg" class="card-img-top" alt="orbeez  in 3d print">
-          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+
+      <!-- Card 5 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="pcr ligate.jpg" class="card-img-top" alt="PCR Ligation">
+          <div class="card-body" style="background-color: #52A0A1; color: #010D1C;">
             <h5 class="card-title">PCR Ligation Setup</h5>
-            <p class="card-text">The following setup was used to perform ligation of the plasmids of interest. The 
-              PCR tube comtained the insert (tetracycline) and the vector (pSB536), which were to be combined together 
-              and then inserted into e.coli cells to test for resistance. This setup had to be modified in multiple aspects 
-              including: PCR extension time, concentrations of plasmids used in initial primer step, re-design of primer 
-              sequences for tetracycline insert.  
+            <p class="card-text">
+              Optimized plasmid ligation setup for testing resistance in E.coli cells, including redesign of primer sequences.
             </p>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="miniprep.jpg" class="card-img-top" alt="...">
-          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+
+      <!-- Card 6 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="miniprep.jpg" class="card-img-top" alt="DNA Mini-Prep">
+          <div class="card-body" style="background-color: #52A0A1; color: #010D1C;">
             <h5 class="card-title">DNA Mini-Prep/Extraction</h5>
-            <p class="card-text"> Frequently, I would have to prepare DNA from overnight samples or gel electrophoresis agarose samples. 
-              For overnight cell cultures (pictured), I would centrifuge the sample prior to extracting the DNA with a series of buffers. 
-              For an agarose sample, I would have to dissolve the cut gel in an acidic buffer before DNA extraction. Each sample was tested 
-              for the desired DNA concentration using a spectrophotemeter. Often, the DNA from this protocol would be used in other experiments
-              such as for PCR or transfection steps. 
+            <p class="card-text">
+              Performed DNA extraction from overnight cultures and agarose samples, followed by spectrophotometer analysis.
             </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </section>
+
+
 
 <!--REU-->
 <section>
@@ -374,76 +437,98 @@ a:visited{
       <a href="https://docs.google.com/presentation/d/1Sf9m_bUDr2yUecIgxL0sdQ9Cqx3unNCd/edit?usp=sharing&ouid=118368788342696745468&rtpof=true&sd=true"><button class="button-10" role="button">View Presentation here</button></a>
     </div> 
   </div>
-  <section style="margin:1%;">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card h-100">
-        <img src="nir box.jpg" class="card-img-top" alt="3d blue box">
-        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
-          <h5 class="card-title">NIR 3D Printed Box</h5>
-          <p class="card-text">A 3D printed box that would hold the NIR sample and probe. Created using AutoCAD and Prusa slicing software.</p>
+
+
+  <!-- Carousel Wrapper REU -->
+  <div id="cardCarouselREU" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#cardCarouselREU" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#cardCarouselREU" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#cardCarouselREU" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#cardCarouselREU" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#cardCarouselREU" data-bs-slide-to="4"></button>
+      <button type="button" data-bs-target="#cardCarouselREU" data-bs-slide-to="5"></button>
+    </div>
+
+    <!-- Carousel Items -->
+    <div class="carousel-inner">
+      <!-- Card 1 -->
+      <div class="carousel-item active">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="nir box.jpg" class="card-img-top" alt="NIR 3D Printed Box">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">NIR 3D Printed Box</h5>
+            <p class="card-text">A 3D printed box that would hold the NIR sample and probe. Created using AutoCAD and Prusa slicing software.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="orbeez printed.jpg" class="card-img-top" alt="orbeez  in 3d print">
-        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
-          <h5 class="card-title">3D Printed Orbeez Holder</h5>
-          <p class="card-text">The blue rectangle plate was 3D printed to hold the sample inside the NIR setup. Design specs were determined using AutoCAD.</p>
+     
+      <!-- Card 2 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="orbeez printed.jpg" class="card-img-top" alt="3D Printed Orbeez Holder">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">3D Printed Orbeez Holder</h5>
+            <p class="card-text">The blue rectangle plate was 3D printed to hold the sample inside the NIR setup. Design specs were determined using AutoCAD.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="orbeez setup.jpg" class="card-img-top" alt="...">
-        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
-          <h5 class="card-title">Orbeez Drying Apparatus</h5>
-          <p class="card-text">The drying apparatus consisted of a scale, a small 3D printed box to hold the orbeez sample, and a driver circuit
-            connected under the box. The goal was to monitor the weight of the sample as it dried while being supplied a specific frequency. At the optimal
-          frequency, the sample would dry faster while using less energy.</p>
+
+      <!-- Card 3 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="orbeez setup.jpg" class="card-img-top" alt="3D Printed Orbeez Holder">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">Orbeez Drying Apparatus</h5>
+            <p class="card-text">The drying apparatus consisted of a scale, a small 3D printed box to hold the orbeez sample, and a driver circuit connected under the box. The goal was to monitor the weight of the sample as it dried while being supplied a specific frequency. At the optimal frequency, the sample would dry faster while using less energy.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="NIR setup.jpg" class="card-img-top" alt="...">
-        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
-          <h5 class="card-title">NIR Spectroscopy Setup</h5>
-          <p class="card-text">The NIR Spectroscopy setup included a light probe and a chamber to hosue the sample. The probe detects light wavelengths of specific colors
-            depending on the sample type. For the polymer "Orbeez" I studied, the wavelengths would decrease over time as the amount of light reflecting off the 
-            sample decreased as it dried. 
-          </p>
+    
+      <!-- Card 4 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="NIR setup.jpg" class="card-img-top" alt="3D Printed Orbeez Holder">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">NIR Spectroscopy Setup</h5>
+            <p class="card-text">The NIR Spectroscopy setup included a light probe and a chamber to hosue the sample. The probe detects light wavelengths of specific colors depending on the sample type. For the polymer "Orbeez" I studied, the wavelengths would decrease over time as the amount of light reflecting off the sample decreased as it dried.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="driver pt 2.jpg" class="card-img-top" alt="orbeez  in 3d print">
-        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
-          <h5 class="card-title">Driver Circuit</h5>
-          <p class="card-text">This circuit was designed with a "driver" sink. This setup was used to 
-            determine the optimal frequency and voltage for a faster drying rate. It was also used to determine
-            the power and efficiency of the specific transducer being used, 
-          </p>
+
+      <!-- Card 5 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="driver pt 2.jpg" class="card-img-top" alt="3D Printed Orbeez Holder">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">Driver Circuit</h5>
+            <p class="card-text">This circuit was designed with a "driver" sink. This setup was used to determine the optimal frequency and voltage for a faster drying rate. It was also used to determine the power and efficiency of the specific transducer being used.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="comsol 1.jpg" class="card-img-top" alt="...">
-        <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
-          <h5 class="card-title">COMSOL Multiphysics Modeling</h5>
-          <p class="card-text">This was a model rendering to test the thermodynamics and heat 
-            transfer properties of drying rates with an ultrasonic transducer. The blue areas represent 
-            exposure to outside air whereas the green/yellow areas represent the effects of the sound waves 
-            to dry the material. Explored vapor-liquid equilibrium modeling in terms of drying efficiency. 
-          </p>
+
+      <!-- Card 6 -->
+      <div class="carousel-item">
+        <div class="card h-100 mx-auto" style="width: 25rem;">
+          <img src="comsol 1.jpg" class="card-img-top" alt="3D Printed Orbeez Holder">
+          <div class="card-body" style="background-color: #52A0A1; color:#010D1C;">
+            <h5 class="card-title">COMSOL Multiphysics Modeling</h5>
+            <p class="card-text">This was a model rendering to test the thermodynamics and heat transfer properties of drying rates with an ultrasonic transducer. The blue areas represent exposure to outside air whereas the green/yellow areas represent the effects of the sound waves to dry the material. Explored vapor-liquid equilibrium modeling in terms of drying efficiency.</p>
+          </div>
         </div>
       </div>
+      
     </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#cardCarouselREU" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#cardCarouselREU" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </section>
-  
-</section>
-
