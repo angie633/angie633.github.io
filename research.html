@@ -9,36 +9,23 @@
 <style>
 .nav_bar{
   flex:auto;
-  margin:1%;
-  margin-right:30%;
-  padding-top:1%;
-  padding-right:4%;
-  padding-bottom:0.2%;
+  padding:2%;
+  padding-left: 0%;
   font-family:Monaco;
-  border-radius: 15px;  
-  background-color:#32746D;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 15px;
   width:fit-content;
 }
 
-.btn-outline-light{
-        border-width: medium;
+.logo{
+        flex: auto;
+        float: right;
+        position:relative;
+        padding-right: 2%;
+        top:-90px;
+        right:0%;
       }
 
-a:link { 
-  text-decoration: none; 
-  color:black;
-} 
-a:visited { 
-  text-decoration: none; 
-  color:black;
-} 
-a:hover { 
-  text-decoration: none; 
-} 
-a:active { 
-  text-decoration: none; 
-}
+
 
 .card{
   margin:3%;
@@ -88,44 +75,89 @@ a:active {
   transform: translateY(2px);
 }
 
-.button-38 {
-  background-color: #71CCD5;
-  border: 0;
-  border-radius: .5rem;
-  box-sizing: border-box;
-  color: #F6F4F0;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: .875rem;
-  font-weight: 600;
-  line-height: 1.25rem;
-  padding: .75rem 1rem;
-  text-align: center;
-  text-decoration: none #D1D5DB solid;
-  text-decoration-thickness: auto;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+.bubbles {
+  --c1: #212121; /* Recommendation: same background color */
+  --c2: #8685ef;
+  --size-letter: 16px;
+  padding: 0.5em 1em;
+  font-size: var(--size-letter);
+
+  background-color: transparent;
+  border: calc(var(--size-letter) / 6) solid var(--c2);
+  border-radius: 0.2em;
   cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+
+  overflow: hidden;
+  position: relative;
+  transition: 60ms cubic-bezier(0.83, 0, 0.17, 1);
 }
 
-.button-38:hover {
-  background-color: #87d0f0;
+.bubbles > .text {
+  font-weight: 700;
+  color: var(--c2);
+  position: relative;
+  z-index: 1;
+  transition: color 600ms cubic-bezier(0.83, 0, 0.17, 1);
 }
 
-.button-38:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.bubbles::before {
+  top: 0;
+  left: 0;
 }
 
-.button-38:focus-visible {
-  box-shadow: none;
+.bubbles::after {
+  top: 100%;
+  left: 100%;
+}
+
+.bubbles::before,
+.bubbles::after {
+  content: "";
+  width: 150%;
+  aspect-ratio: 1/1;
+  scale: 0;
+  transition: 1000ms cubic-bezier(0.76, 0, 0.24, 1);
+
+  background-color: var(--c2);
+  border-radius: 50%;
+
+  position: absolute;
+  translate: -50% -50%;
+}
+
+.bubbles:hover {
+  & > span {
+    color: var(--c1);
+  }
+  &::before,
+  &::after {
+    scale: 1;
+  }
+}
+
+.bubbles:active {
+  scale: 0.98;
+  filter: brightness(0.9);
 }
 
 .card{
-  background-color:#2E5077;
-  color:#F6F4F0;
+  background-color:#FAFAFA;
+  color:#131A1B;
 }
+.card-title{
+  color:#058feb;
+}
+
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:#71CCD5;
+  text-align: center;
+  }
 
 </style>
 
@@ -141,9 +173,15 @@ a:active {
       <a href=projects.html><button class="button-29" role="button">Projects</button></a>
       </ul>
     </div>
+
+    <div class="logo">
+  <a href="index.html"><img src="AP_Professional logo2.jpg"></a>
+    </div>
+
 </header>
 
-<section>
+
+<section style="padding-bottom:5%;">
 <h1 style="margin:3%; font-family: Monaco;"><strong>Research Paper Archive</strong></h1>
 <div style="color:#2E5077;" class="container text-center">
   <!--First row of articles-->
@@ -157,7 +195,7 @@ a:active {
             life. The industry and its influence can be broken up into 4 distinct sectors, which includes
             production, distribution, consumption, and waste. This paper explores and models this system of distribution
             production. </p> 
-            <a href="https://drive.google.com/file/d/1UPQOMCLD-4Xw2p0V-qUYTcj_i6Q7NtQJ/view?usp=sharing"><button class="button-38" role="button">Read more</button></a>
+            <a href="https://drive.google.com/file/d/1UPQOMCLD-4Xw2p0V-qUYTcj_i6Q7NtQJ/view?usp=sharing"><button class="bubbles" role="button"><span class="text">Read more</span></button></a>
         </div>
       </div>
     </div>
@@ -172,7 +210,7 @@ a:active {
               and possess a wide range of mechanical advantages. These mechanical advantages include high
               levels of yield stress, high elastic and shear moduli, high tensile strengths, and other properties.
             </p>
-            <a href="https://drive.google.com/file/d/175fWQmo9jV3HNs1l_IG1a0CdITwCeB38/view?usp=sharing"><button class="button-38" role="button">Read more</button></a>
+            <a href="https://drive.google.com/file/d/175fWQmo9jV3HNs1l_IG1a0CdITwCeB38/view?usp=sharing"><button class="bubbles" role="button"><span class="text">Read more</span></button></a>
           </div>
         </div>
       </section>
@@ -189,7 +227,7 @@ a:active {
               the thermodynamic modeling of both types of engines and characterizes the carbon emissions from each
               motorsport.
             </p>
-            <a href="https://drive.google.com/file/d/19KM-tflZP_C6aKutgm1yVt_SIpz3jTCV/view?usp=sharing"><button class="button-38" role="button">Read more</button></a>
+            <a href="https://drive.google.com/file/d/19KM-tflZP_C6aKutgm1yVt_SIpz3jTCV/view?usp=sharing"><button class="bubbles" role="button"><span class="text">Read more</span></button></a>
           </div>
         </div>
       </section>
@@ -208,7 +246,7 @@ a:active {
             works by activating the body’s response to insulin, the chemical that naturally controls glucose
             levels. This paper explores the phase equilibrium between refrigerated metformin vs room temperature using
             a thermodynamic approach of fugacity and Gibb's Free energy. </p>
-          <a href="https://drive.google.com/file/d/165WgXQ2z7aoAq-3BBvNwHndPTTBRdWjD/view?usp=sharing"><button class="button-38" role="button">Read more</button></a>
+          <a href="https://drive.google.com/file/d/165WgXQ2z7aoAq-3BBvNwHndPTTBRdWjD/view?usp=sharing"><button class="bubbles" role="button"><span class="text">Read more</span></button></a>
         </div>
       </div>
     </div>
@@ -224,8 +262,7 @@ a:active {
   </div>
 </div>
 </section>
-
-
-
 </body>
+  <footer><p>© <script>document.write(new Date().getFullYear());</script> Angelina Persaud. All rights reserved </p></footer>
+
 </html>

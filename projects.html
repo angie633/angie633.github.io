@@ -10,17 +10,20 @@
   
   .nav_bar{
   flex:auto;
-  margin:1%;
-  margin-right:30%;
-  padding-top:1%;
-  padding-right:4%;
-  padding-bottom:0.2%;
+  padding:2%;
+  padding-left: 0%;
   font-family:Monaco;
-  border-radius: 15px;  
-  background-color:#32746D;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 15px;
   width:fit-content;
 }
+.logo{
+        flex: auto;
+        float: right;
+        position:relative;
+        padding-right: 2%;
+        top:-90px;
+        right:0%;
+      }
 .btn-outline-light{
         border-width: medium;
       }
@@ -37,8 +40,8 @@ a:active {
   text-decoration: none; 
 }
 .card-body{
-  background-color: #F6F4F0;
-  color:#32746D;
+  background-color: #FAFAFA;
+  color:#131A1B;
 }
 a:visited{
         color:black;
@@ -89,7 +92,7 @@ a:visited{
 }
 
 .button-38 {
-  background-color: #32746D;
+  background-color: #6C62DA;
   border: 0;
   border-radius: .5rem;
   box-sizing: border-box;
@@ -110,7 +113,7 @@ a:visited{
 }
 
 .button-38:hover {
-  background-color: #71bb8d;
+  background-color: #FFE66D;
 }
 
 .button-38:focus {
@@ -121,11 +124,71 @@ a:visited{
 .button-38:focus-visible {
   box-shadow: none;
 }
-.card-header{
-  background-color: #010D1C;
-  color:#F6F4F0;
+
+
+
+.button2 {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #6C62DA;
+  transition: all 500ms;
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #6C62DA;
 }
 
+.button2:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #9690e0;
+  box-shadow: 4px 5px 17px -4px #6C62DA;
+}
+
+.button2::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #6C62DA;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.button2:hover::before {
+  width: 250%;
+}
+
+.card-header{
+  background-color: #39A8F2;
+  color:#F6F4F0;
+}
+.logo {
+    float: right;
+    width: auto;  
+    height: 2px;  
+    position: relative;
+    padding-right: 2%;
+    padding-top: 1%;
+    top: -100px;
+        }
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:#71CCD5;
+  text-align: center;
+  }
 
     </style>
 </head>
@@ -142,6 +205,11 @@ a:visited{
       </ul>
     </div>
 </header>
+
+<div class="logo">
+  <a href="index.html"><img src="AP_Professional logo2.jpg"></a>
+</div>
+
 <h1 style="margin:3%; font-family: Monaco;"><strong>Project Archive</strong></h1>
 <section style="margin: 4%;">
     <div class="container text-center">
@@ -159,7 +227,7 @@ a:visited{
                     Also includes a description of various purification techniques specific for recombinant proteins.
                   </p>
                   <img src="dna.png" class="img-thumbnail" alt="dna and plasmid" style="margin-bottom:4%;">
-                  <a href="https://drive.google.com/file/d/13AV8vMSzf95pi4358THcn5lM06Fk3XKZ/view?usp=sharing"><button class="button-38" role="button">See more</button></a>
+                  <a href="https://drive.google.com/file/d/13AV8vMSzf95pi4358THcn5lM06Fk3XKZ/view?usp=sharing"><button class="button2" role="button">See more</button></a>
                 </div>
                 <div class="card-footer text-body-secondary">
                   2024
@@ -178,7 +246,7 @@ a:visited{
                     Includes a view of the prosthetic heme group, essential for oxygen transfer in the body. 
                   </p>
                   <img src="pymol.png" class="img-thumbnail" alt="hemoglobin protein" style="margin-bottom:4%;">
-                  <a href="A1C moive final exported.mp4"><button class="button-38" role="button">See more</button></a>
+                  <a href="A1C moive final exported.mp4"><button class="button2" role="button">See more</button></a>
                 </div>
                 <div class="card-footer text-body-secondary">
                   2023
@@ -200,7 +268,7 @@ a:visited{
                   <p class="card-text">Process flow diagram that was optimized for the production
                     of propylene from the metathesis reaction of ethylene and cis-2-butene. </p>
                     <img src="propylene.png" class="img-thumbnail" alt="hemoglobin protein" style="margin-bottom:4%;">  
-                  <a href="https://drive.google.com/file/d/1PDBCx9JLd8DS5Zv74Gw0zW8nYyU7JHgW/view?usp=sharing"><button class="button-38" role="button">See more</button></a>
+                  <a href="https://drive.google.com/file/d/1PDBCx9JLd8DS5Zv74Gw0zW8nYyU7JHgW/view?usp=sharing"><button class="button2" role="button">See more</button></a>
                 </div>
                 <div class="card-footer text-body-secondary">
                   2024
@@ -216,4 +284,5 @@ a:visited{
       </div>
 </section>
 </body>
+  <footer><p>© <script>document.write(new Date().getFullYear());</script> Angelina Persaud. All rights reserved </p></footer>
 </html>
